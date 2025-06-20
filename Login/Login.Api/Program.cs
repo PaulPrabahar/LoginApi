@@ -14,7 +14,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //dependency Injection
-builder.Services.AddDbContext<LoginPostgresDbContext>(options => options
+builder.Services.AddDbContext<AuthDbContext>(options => options
 .UseNpgsql(builder.Configuration.GetConnectionString("LoginPostgresConnectionString")));
 
 //Authentication Implementation
