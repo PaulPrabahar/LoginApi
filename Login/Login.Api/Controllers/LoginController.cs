@@ -12,9 +12,9 @@ public class LoginController : ControllerBase
     }
 
     //Create or Register User Profile
-    [HttpPost]
-    public Task<IActionResult> Register()
-    {
+    //[HttpPost]
+    //public Task<IActionResult> Register()
+    //{
 
-    }
+    //}
 }
