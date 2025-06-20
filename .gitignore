@@ -1,0 +1,40 @@
+# Build files
+bin/
+obj/
+*.user
+*.suo
+*.cache
+*.log
+*.vs/
+
+# Dotnet-specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Visual Studio
+.vs/
+*.dbmdl
+*.psess
+*.vspx
+*.vssscc
+*.user
+*.vspscc
+*.ncb
+*.sdf
+*.opensdf
+*.cachefile
+*.VC.db
+
+# EF Migrations (optional to ignore generated code)
+# Comment this if you want to commit migrations
+# Migrations/
+
+# Secrets
+appsettings.Development.json
+secrets.json
+.env
