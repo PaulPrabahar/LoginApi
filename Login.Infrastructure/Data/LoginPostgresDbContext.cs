@@ -1,4 +1,5 @@
 ﻿using Login.Domain.Entities;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Login.Infrastructure.Data;
 
@@ -38,6 +40,28 @@ public class AuthDbContext : IdentityDbContext<AppUser, AppRole, Guid,
                     .HasForeignKey(ur => ur.RoleId)
                     .IsRequired();
         });
+
+        //Data seeding
+        var userType = new List<AppRole>
+        {
+            new AppRole
+                {
+            Id = Guid.Parse("408df6a4-e4fd-41c7-aa3c-071502d1f1a4"),
+            Name = "Free",
+            NormalizedName = "FREE",
+            RoleName = "Free",
+            CreatedAt = DateTime.UtcNow,
+        },
+            new AppRole
+        {
+            Id = Guid.Parse("408df6a4-e4fd-41c7-aa3c-071502D1f2a5"),
+            Name = "Paid",
+            NormalizedName = "PAID",
+            RoleName = "Paid",
+            CreatedAt = DateTime.UtcNow,
+        }
+        };
+    
     }
 }
 
